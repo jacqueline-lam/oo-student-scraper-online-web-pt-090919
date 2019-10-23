@@ -1,5 +1,6 @@
 class Student
   # Student class shouldn't know about the Scraper class
+  # shouldn't call on the Scraper class in any of its methods or take in the Scraper class itself as an argument
   
   attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url 
 
