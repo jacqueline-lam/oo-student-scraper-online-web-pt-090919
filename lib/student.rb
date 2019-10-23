@@ -39,10 +39,7 @@ class Student
     # Iterate over the given hash and use meta-programming to
     # dynamically assign student attr per the key/value pairs
     
-    attributes_hash.each do |key, value| 
-      self.send(("#{key.to_s}="), value)
-      puts key.class
-    end
+    attributes_hash { |key, value| self.send(("#{key.to_s}="), value)}
     
   end
 
