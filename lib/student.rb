@@ -37,21 +37,9 @@ class Student
   # uses that hash to set additional attributes for that student. 
   def add_student_attributes(attributes_hash)
     # Iterate thru each attribute (key/value pair) and define additional instance var
-    attributes_hash.each do |k,v|
-      if k == :twitter
-        @twitter = v
-      elsif k == :linkedin
-        @linkedin = v
-      elsif k == :github 
-        @github = v
-      elsif k == :blog
-        @blog = v
-      elsif k == :profile_quote
-        @profile_quote = v
-      elsif k == :bio
-        @bio = v
-      end
-    end
+    
+    # Use Metaprogramming 
+    attributes_hash.each {|key, value| self.send(("#{key.to_s}="), value)}
   end
 
   # Returns the class variable @@all
