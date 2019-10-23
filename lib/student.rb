@@ -36,9 +36,9 @@ class Student
   # Uses Scraper class to get a hash of a given students attributes and 
   # uses that hash to set additional attributes for that student. 
   def add_student_attributes(attributes_hash)
-    # Iterate thru each attribute (key/value pair) and define additional instance var
+    # Iterate over the given hash and use meta-programming to
+    # dynamically assign student attr per the key/value pairs
     
-    # Use Metaprogramming 
     attributes_hash.each {|key, value| self.send(("#{key.to_s}="), value)}
   end
 
