@@ -1,5 +1,6 @@
 class Student
-
+  # Student class shouldn't know about the Scraper class
+  
   attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url 
 
   @@all = []
