@@ -40,6 +40,7 @@ class Student
     # dynamically assign student attr per the key/value pairs
     
     attributes_hash.each {|key, value| self.send(("#{key.to_s}="), value)}
+    return key
   end
 
   # Returns the class variable @@all
