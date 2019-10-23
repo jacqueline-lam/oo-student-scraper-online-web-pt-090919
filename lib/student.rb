@@ -7,8 +7,7 @@ class Student
 
   @@all = []
 
-  # Takes in an arg of a hash and sets new student's attributes using k/v pairs of hash
-  # use meta-programming to assign the new student a and values 
+  # Takes in an arg of a hash and sets new student's attrs using k/v pairs of hash 
   def initialize(student_hash)
     # Metaprogramming + Mass assignment
     # .send calls method name that's is key's name, with an arg of the value 
