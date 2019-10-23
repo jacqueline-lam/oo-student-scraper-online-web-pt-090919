@@ -10,7 +10,9 @@ class Student
   # Takes in an arg of a hash and sets new student's attributes using k/v pairs of hash
   # use meta-programming to assign the newly created student attributes and values 
   def initialize(student_hash)
-    
+    #metaprogramming + mass assignment
+    # .send calls method name that's is key's name, with an arg of the value 
+    student_hash
     @name = student_hash[:name]
     @location = student_hash[:location]
     @profile_url = student_hash[:profile_url]
