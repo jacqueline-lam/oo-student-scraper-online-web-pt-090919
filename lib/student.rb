@@ -8,14 +8,15 @@ class Student
   @@all = []
 
   # Takes in an arg of a hash and sets new student's attributes using k/v pairs of hash
-  # use meta-programming to assign the newly created student attributes and values 
+  # use meta-programming to assign the new student a and values 
   def initialize(student_hash)
-    #metaprogramming + mass assignment
+    # Metaprogramming + Mass assignment
     # .send calls method name that's is key's name, with an arg of the value 
     student_hash.each {|key, value| self.send(("#{key.to_s}="), value)}
-    # @name = student_hash[:name]
-    # @location = student_hash[:location]
-    # @profile_url = student_hash[:profile_url]
+    # Same as:
+      # @name = student_hash[:name]
+      # @location = student_hash[:location]
+      # @profile_url = student_hash[:profile_url]
     
     # Every time an instance of the class is initialized
     # Adds new student to the Student class' collection of all existing students
