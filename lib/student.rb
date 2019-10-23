@@ -41,7 +41,7 @@ class Student
     
     attributes_hash.each do |key, value| 
       self.send(("#{key.to_s}="), value)
-      puts attributes_hash
+      puts [key, value]
     end
     
   end
