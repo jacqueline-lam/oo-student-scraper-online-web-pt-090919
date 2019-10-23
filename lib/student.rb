@@ -12,6 +12,7 @@ class Student
     # Metaprogramming + Mass assignment
     # .send calls method name that's is key's name, with an arg of the value 
     student_hash.each {|key, value| self.send(("#{key.to_s}="), value)}
+    
     # Same as:
       # @name = student_hash[:name]
       # @location = student_hash[:location]
