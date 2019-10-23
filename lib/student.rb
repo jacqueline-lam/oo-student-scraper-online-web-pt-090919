@@ -12,10 +12,10 @@ class Student
   def initialize(student_hash)
     #metaprogramming + mass assignment
     # .send calls method name that's is key's name, with an arg of the value 
-    student_hash.each {|key, value| self.send(("#{key}="), value)}
-    @name = student_hash[:name]
-    @location = student_hash[:location]
-    @profile_url = student_hash[:profile_url]
+    student_hash.each {|key, value| self.send(("#{key.to_s}="), value)}
+    # @name = student_hash[:name]
+    # @location = student_hash[:location]
+    # @profile_url = student_hash[:profile_url]
     
     # Every time an instance of the class is initialized
     # Adds new student to the Student class' collection of all existing students
